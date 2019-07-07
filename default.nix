@@ -4,12 +4,12 @@ let
 
   inherit (nixpkgs) pkgs;
 
-  f = { mkDerivation, base, Cabal, cabal-doctest, contravariant
-      , doctest, exitcode, filepath, lens, mtl, stdenv, stm, tasty
-      , tasty-hunit
+  f = { mkDerivation, base, Cabal, cabal-doctest, system-process
+      , contravariant, doctest, exitcode, filepath, lens, mtl, stdenv
+      , stm, tasty, tasty-hunit
       }:
       mkDerivation {
-        pname = "classy-process";
+        pname = "system-process";
         version = "0.1.0.0";
         src = ./.;
         setupHaskellDepends = [ base Cabal cabal-doctest ];
@@ -17,9 +17,10 @@ let
           base contravariant exitcode filepath lens mtl stm
         ];
         testHaskellDepends = [
-          base doctest exitcode filepath lens tasty tasty-hunit
+          base system-process doctest exitcode filepath lens tasty
+          tasty-hunit
         ];
-        homepage = "https://github.com/emilypi/classy-process";
+        homepage = "https://github.com/emilypi/system-process";
         description = "A new library for system processes";
         license = stdenv.lib.licenses.bsd3;
       };
