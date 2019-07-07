@@ -3,11 +3,11 @@ cabal-version:         1.18
 -- init'.  For further documentation, see
 -- http://haskell.org/cabal/users-guide/
 
-name:                  classy-process
+name:                  system-process
 version:               0.1.0.0
 synopsis:              A new library for system processes
 description:
-  'classy-process' is a well-typed system process library providing
+  'system-process' is a well-typed system process library providing
    optics and combinators for working with system handles and streams,
    as well as exit codes, process identifiers, etc.
 homepage:              https://github.com/emilypi/classy-process
